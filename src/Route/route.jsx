@@ -2,6 +2,9 @@ import { createBrowserRouter, Router } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Page/Home";
 import Details from "../Component/Details";
+import Login from "../Component/Login";
+import Register from "../Component/Register";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +21,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/details/:id",
-                element:<Details></Details>,
+                element:<PrivateRoute>
+                    <Details></Details>
+                </PrivateRoute>,
                 loader:async({params})=>{
                     const res =await fetch("/career.json")
                     const data = await res.json()
@@ -26,6 +31,14 @@ const router = createBrowserRouter([
                     console.log(data)
                     return singleData
                 }
+            },
+            {
+                path:"/login",
+                element:<Login></Login>
+            },
+            {
+                path:"/register",
+                element:<Register></Register>
             }
         ]
     }

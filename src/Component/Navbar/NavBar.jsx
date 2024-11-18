@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { authContext } from "../AuthProvider/AuthProvider";
+import "./navbar.css"
+
 
 
 const NavBar = () => {
+   const {user, handleLogout} = useContext(authContext)
+   console.log(user)
+  //  console.log(user.displayName)
+   
     return (
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -23,7 +31,7 @@ const NavBar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-             <NavLink to="/"> <li><a>Item 1</a></li></NavLink>
+             <NavLink to="/"> <li><a>Home</a></li></NavLink>
              
               <li><a>Item 3</a></li>
             </ul>
@@ -32,13 +40,30 @@ const NavBar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
+          <NavLink to="/"> <li><a>Home</a></li></NavLink>
            
             <li><a>Item 3</a></li>
           </ul>
         </div>
         <div className="navbar-end">
-         <NavLink> <a className="btn">Login</a></NavLink>
+        {user ? 
+         
+        <div className="flex">
+          <div>
+          <NavLink to="/login"> <a onClick={handleLogout} className="btn">Logout</a></NavLink>
+          </div>
+           
+         <div className="user-container ">
+         <img src= {user.photoURL} alt="" className="h-10 w-10 rounded-full border-2 border-red-500 " />
+         <div className="user-name">{user.displayName}</div>
+         </div>
+
+        </div>
+        :<NavLink to="/login"> <a className="btn">Login</a></NavLink>}
+          
+          
+         
+        
         </div>
       </div>
     );
