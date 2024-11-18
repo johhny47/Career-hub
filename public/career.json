@@ -1,0 +1,135 @@
+[
+    {
+      "service_name": "Career Counseling Sessions",
+      "category": "Online",
+      "brief_description": "One-on-one career counseling sessions to help you identify your strengths, weaknesses, and career path.",
+      "pricing": "$100 per session",
+      "duration": "12-12-24 2-3pm",
+      "counselor": "John Smith, Career Coach",
+      "rating": 4.8,
+      "learn_more": "https://example.com/career-counseling",
+      "image":  "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Resume Review",
+      "category": "Online",
+      "brief_description": "Professional resume review to ensure your resume stands out to recruiters.",
+      "pricing": "$50 per review",
+      "duration": "13-12-24 10-11am",
+      "counselor": "Sarah Johnson, HR Expert",
+      "rating": 4.7,
+      "learn_more": "https://example.com/resume-review",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Interview Preparation",
+      "category": "Online",
+      "brief_description": "Mock interview sessions and personalized feedback to prepare for your upcoming interviews.",
+      "pricing": "$75 per session",
+      "duration": "14-12-24 4-5pm",
+      "counselor": "Michael Lee, Interview Specialist",
+      "rating": 4.9,
+      "learn_more": "https://example.com/interview-prep",
+      "image":  "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "LinkedIn Profile Optimization",
+      "category": "Online",
+      "brief_description": "Get expert advice to improve your LinkedIn profile and increase your visibility to recruiters.",
+      "pricing": "$40 per session",
+      "duration": "15-12-24 1-2pm",
+      "counselor": "Emily White, Social Media Strategist",
+      "rating": 4.6,
+      "learn_more": "https://example.com/linkedin-optimization",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Job Search Strategy",
+      "category": "Online",
+      "brief_description": "Learn how to effectively search for jobs, tailor applications, and network with recruiters.",
+      "pricing": "$60 per session",
+      "duration": "16-12-24 3-4pm",
+      "counselor": "David Brown, Job Search Expert",
+      "rating": 4.7,
+      "learn_more": "https://example.com/job-search-strategy",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Career Transition Coaching",
+      "category": "Offline",
+      "brief_description": "Guidance for individuals looking to switch careers or industries, including skill gap analysis.",
+      "pricing": "$120 per session",
+      "duration": "17-12-24 10-11am",
+      "counselor": "Laura Green, Career Transition Coach",
+      "rating": 4.9,
+      "learn_more": "https://example.com/career-transition",
+      "image":  "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Salary Negotiation Coaching",
+      "category": "Online",
+      "brief_description": "Learn strategies to negotiate your salary effectively and get the compensation you deserve.",
+      "pricing": "$90 per session",
+      "duration": "18-12-24 11-12pm",
+      "counselor": "Chris Adams, Negotiation Expert",
+      "rating": 4.8,
+      "learn_more": "https://example.com/salary-negotiation",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Personal Branding for Career Growth",
+      "category": "Online",
+      "brief_description": "Build a personal brand to accelerate your career growth and stand out in a competitive market.",
+      "pricing": "$110 per session",
+      "duration": "19-12-24 9-10am",
+      "counselor": "Anna Miller, Branding Consultant",
+      "rating": 5.0,
+      "learn_more": "https://example.com/personal-branding",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Group Career Coaching",
+      "category": "Group, Offline",
+      "brief_description": "Interactive group coaching sessions focused on personal development and career growth strategies.",
+      "pricing": "$40 per person",
+      "duration": "20-12-24 5-6pm",
+      "counselor": "Mark Taylor, Career Coach",
+      "rating": 4.5,
+      "learn_more": "https://example.com/group-career-coaching",
+      "image":  "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Entrepreneurship Coaching",
+      "category": "Online",
+      "brief_description": "Sessions for aspiring entrepreneurs to develop their business ideas and overcome startup challenges.",
+      "pricing": "$150 per session",
+      "duration": "21-12-24 3-4pm",
+      "counselor": "Jason Davis, Entrepreneur Coach",
+      "rating": 4.9,
+      "learn_more": "https://example.com/entrepreneurship-coaching",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Freelance Career Coaching",
+      "category": "Online",
+      "brief_description": "Guidance on how to build a successful freelance career and attract clients in your niche.",
+      "pricing": "$70 per session",
+      "duration": "22-12-24 6-7pm",
+      "counselor": "Lisa Black, Freelance Expert",
+      "rating": 4.7,
+      "learn_more": "https://example.com/freelance-career",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    },
+    {
+      "service_name": "Work-Life Balance Coaching",
+      "category": "Offline",
+      "brief_description": "Get help finding a healthy balance between work and personal life with customized coaching strategies.",
+      "pricing": "$80 per session",
+      "duration": "23-12-24 2-3pm",
+      "counselor": "Karen White, Life Coach",
+      "rating": 4.6,
+      "learn_more": "https://example.com/work-life-balance",
+      "image": "https://i.ibb.co.com/1sCrffy/Verizon-Apple-i-Phone-15-Pro-Max-1-TB-White-Titanium.jpg"
+    }
+  ]
+  
