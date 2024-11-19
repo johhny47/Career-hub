@@ -5,11 +5,14 @@ import Details from "../Component/Details";
 import Login from "../Component/Login";
 import Register from "../Component/Register";
 import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
+import ErrorPage from "../Component/ErrorPage";
+import MyProfile from "../Component/MyProfile";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element:<MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -39,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path:"/register",
                 element:<Register></Register>
+            },
+            {
+                path:"/profile",
+                element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             }
         ]
     }

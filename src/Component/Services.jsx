@@ -8,7 +8,7 @@ const Services = ({data}) => {
  
    
     return (
-        <div className="card bg-base-100 w-72 md:w-80 lg:w-96 shadow-xl">
+        <div className="card bg-base-100 w-72 md:w-80 lg:w-80 shadow-xl">
   <figure>
     <img
       src={image}
@@ -24,7 +24,7 @@ const Services = ({data}) => {
     <p>{counselor}</p>
 
     <div className="card-actions justify-end">
-      <NavLink to={`/details/${id}`}><button className="btn btn-accent">Learn More</button></NavLink>
+      <NavLink to={`/details/${id}`}><button className="btn bg-green-500">Learn More</button></NavLink>
     </div>
   </div>
 </div>

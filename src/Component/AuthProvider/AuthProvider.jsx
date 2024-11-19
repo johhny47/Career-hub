@@ -12,17 +12,25 @@ const AuthProvider = ({children}) => {
    return createUserWithEmailAndPassword(auth,email,password)
    
   }
+  
   const handleLogin = (email,passward)=>{
     return signInWithEmailAndPassword(auth,email,passward)
   }
   const handleGoogleLogin =()=>{
     return signInWithPopup(auth, googleProvider)
   }
+
   const mannageProfile =(name,image)=>{
+   
     return updateProfile(auth.currentUser,{
         displayName:name,photoURL:image
-    })
+       
+    } 
+  )
+  
   }
+  
+    
   const handleLogout=()=>{
    signOut( auth)
   }
@@ -33,7 +41,8 @@ const AuthProvider = ({children}) => {
     handleLogout,
     mannageProfile,
     user,
-    setUser
+    setUser,
+   
 
 
   }
