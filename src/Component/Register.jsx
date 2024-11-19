@@ -5,6 +5,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
 
 
+
 const Register = () => {
     const {handleRegister,mannageProfile}=useContext(authContext)
     const [error,setError]=useState("")

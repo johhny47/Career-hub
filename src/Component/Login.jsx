@@ -4,11 +4,14 @@ import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
     const navigate = useNavigate()
     const [error,setError] = useState("")
-    const [showpass,setShowpass] = useState(false)
+    const [showpassword,setShowpassword] = useState(false)
    
     
     const handleSubmit =(e)=>
@@ -21,13 +24,45 @@ const Login = () => {
         handleLogin(email,password)
         .then(res=>{})
         .catch(err=>
-        setError(err.message))
+        setError(err.message)
+       
+     
+       
+      )
+       
+        if(password.length < 6){
+          setError("password must contain at least 6 charcter")
+          return;
+     }
+      if(!/[a-z]/.test(password)){
+          setError("password must contain at least one lowercase")
+          return;
+     }
+      if(!/[A-Z]/.test(password)){
+          setError("password must contain at least one Uppercase")
+           return;
+      }
+      if(error){
+        setError("")
         e.target.reset()
+      }
+      else{
         navigate("/")
+        toast("Successfully login");
+       
+      
+      }
+     
     }
+    
+   
     useEffect(()=>{
       document.title = "CareerHub | Login"
-     },[])
+     },[]) 
+    
+
+    
+   
 
     return (
         <div className="hero bg-base-200 min-h-screen">
@@ -49,10 +84,10 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input type={
-                  showpass ? "text" : "password"
+                  showpassword ? "text" : "password"
                 } name="password" placeholder="password" className="input input-bordered" required />
-                <button onClick={()=>{setShowpass( !showpass )}} className='btn btn-xs absolute right-2 top-12'>{
-                  showpass? <FaEyeSlash />:<IoMdEye />
+                <button onClick={()=>{setShowpassword( !showpassword )}} className='btn btn-xs absolute right-2 top-12'>{
+                  showpassword? <FaEyeSlash />:<IoMdEye />
                   }</button>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
@@ -66,11 +101,11 @@ const Login = () => {
               <p>New to this website? please <Link to="/register" ><span className='text-red-500'>Register</span></Link> </p>
               {error && <p className='text-red-500'>{error}</p>}
             </form>
-           
+          
           </div>
         </div>
       </div>
     );
-};
+  };
 
 export default Login;
