@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Banner from '../Component/Banner/Banner';
 import Services from '../Component/Services';
 
 const Home = () => {
     const data= useLoaderData();
+    useEffect(()=>{
+      document.title = "CareerHub | Home"
+     },[])
   
     return (
         <div className='max-w-6xl mx-auto'>

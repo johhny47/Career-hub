@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "./AuthProvider/AuthProvider";
 
@@ -31,7 +31,11 @@ const Register = () => {
             setError("password must contain at least one upperrcase")
              return;
         }
-    }
+      }
+    useEffect(()=>{
+      document.title = "CareerHub | Register"
+     },[])
+     
     return (
         <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col ">

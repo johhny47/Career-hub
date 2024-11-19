@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
@@ -6,6 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
     const navigate = useNavigate()
+    const [error,setError] = useState("")
+   
     
     const handleSubmit =(e)=>
     {
@@ -15,9 +17,15 @@ const Login = () => {
         const email = e.target.email.value
         const password = e.target.password.value
         handleLogin(email,password)
+        .then(res=>{})
+        .catch(err=>
+        setError(err.message))
         e.target.reset()
         navigate("/")
     }
+    useEffect(()=>{
+      document.title = "CareerHub | Login"
+     },[])
 
     return (
         <div className="hero bg-base-200 min-h-screen">
@@ -49,6 +57,7 @@ const Login = () => {
 
               </div>
               <p>New to this website? please <Link to="/register" ><span className='text-red-500'>Register</span></Link> </p>
+              {error && <p className='text-red-500'>{error}</p>}
             </form>
            
           </div>
