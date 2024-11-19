@@ -10,9 +10,7 @@ const AuthProvider = ({children}) => {
   const handleRegister =(email,password)=>
   {
    return createUserWithEmailAndPassword(auth,email,password)
-    // .then(res=>{
-    //     signOut(auth)
-    // })
+   
   }
   const handleLogin = (email,passward)=>{
     return signInWithEmailAndPassword(auth,email,passward)
@@ -42,7 +40,7 @@ const AuthProvider = ({children}) => {
    
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-          console.log(currentUser)
+         
           if(currentUser){
             setUser(currentUser)
           }

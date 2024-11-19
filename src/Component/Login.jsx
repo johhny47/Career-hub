@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
-import { Navigate } from 'react-router-dom';
+
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
     const navigate = useNavigate()

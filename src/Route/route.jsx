@@ -20,16 +20,16 @@ const router = createBrowserRouter([
                 ]
             },
             {
-                path: "/",
-                element:<PrivateRoute>
-                    <Details></Details>
-                </PrivateRoute>,
+                path: "/details/:id",
+                element: <PrivateRoute>
+                    <Details></Details> </PrivateRoute>,
                 loader:async({params})=>{
                     const res =await fetch("/career.json")
                     const data = await res.json()
                   const  singleData = data.find(d=>d.id == params.id)
-                    console.log(data)
-                    return singleData
+                  
+                    return singleData;
+
                 }
             },
             {

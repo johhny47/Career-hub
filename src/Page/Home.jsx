@@ -11,7 +11,7 @@ const Home = () => {
            <Banner></Banner>
           <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto mt-20'>
           {
-            data.map((data,index)=><Services keys={data.id} data={data}></Services>)
+            data.map((data,index)=><Services keys={index} data={data}></Services>)
            }
           </div>
         </div>

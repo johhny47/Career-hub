@@ -7,8 +7,8 @@ import "./navbar.css"
 
 const NavBar = () => {
    const {user, handleLogout} = useContext(authContext)
-   console.log(user)
-  //  console.log(user.displayName)
+  
+
    
     return (
         <div className="navbar bg-base-100">
@@ -32,8 +32,12 @@ const NavBar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
              <NavLink to="/"> <li><a>Home</a></li></NavLink>
+             {
+              user ?  <NavLink to="/"> <li><a>Details</a></li></NavLink>  : <div><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
+             }
              
-              <li><a>Item 3</a></li>
+            
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">CareerHub</a>
@@ -41,8 +45,12 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
           <NavLink to="/"> <li><a>Home</a></li></NavLink>
+          {
+              user ?  <NavLink to="/"> <li><a>Details</a></li></NavLink>  : <div className="flex"><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
+             }
            
-            <li><a>Item 3</a></li>
+           
           </ul>
         </div>
         <div className="navbar-end">

@@ -69,7 +69,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
               </div>
-              <p>Already have account? please <Link to="/login">Login</Link> </p>
+              <p>Already have account? please <Link to="/login"><span className="text-blue-700">Login</span></Link> </p>
             </form>
            
             {error && <p className="text-red-500">{error}</p>}

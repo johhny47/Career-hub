@@ -2,7 +2,7 @@
 import bannerimg3 from "../../assets/client-we-img.png.webp"
 const BannerThird = () => {
     return (
-        <div className="lg:flex items-center justify-around py-10 text-blue-950 bg-[#e9f3ed]">
+        <div className="lg:flex items-center justify-around px-5 py-10 text-blue-950 bg-[#e9f3ed]">
             <div className="lg:w-[40%]">
                 <h1 className="p-1 w-32 rounded-md bg-white font-semibold">clients we help</h1>
                 <h1 className="text-4xl">Advance your professional <br /> career</h1>

@@ -8,7 +8,7 @@ const Services = ({data}) => {
  
    
     return (
-        <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card bg-base-100 w-72 md:w-80 lg:w-96 shadow-xl">
   <figure>
     <img
       src={image}
