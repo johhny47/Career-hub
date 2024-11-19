@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
+import { Navigate } from 'react-router-dom';
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
+    const navigate = useNavigate()
     
     const handleSubmit =(e)=>
     {
@@ -13,6 +15,8 @@ const Login = () => {
         const email = e.target.email.value
         const password = e.target.password.value
         handleLogin(email,password)
+        e.target.reset()
+        navigate("/")
     }
 
     return (
@@ -40,7 +44,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary w-full">Login</button>
                 <button onClick={handleGoogleLogin} className="btn  mt-2"> <div className='flex'  >Login with <FcGoogle className='ml-1'/>oogle</div></button>
 
               </div>
