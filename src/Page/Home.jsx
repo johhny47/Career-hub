@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className='max-w-6xl mx-auto'>
            <Banner></Banner>
-          <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto mt-20'>
+          <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto '>
           {
             data.map((data,index)=><Services keys={index} data={data}></Services>)
            }

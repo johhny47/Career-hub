@@ -1,11 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "./AuthProvider/AuthProvider";
+import { FaEyeSlash } from "react-icons/fa6";
+import { IoMdEye } from "react-icons/io";
 
 
 const Register = () => {
     const {handleRegister,mannageProfile}=useContext(authContext)
     const [error,setError]=useState("")
+    const [showpass,setShowpass] = useState(false)
     const handleSubmit =(e)=>
     {
         e.preventDefault();
@@ -67,7 +70,12 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                <input type={
+                  showpass ? "text" : "password"
+                } name="password" placeholder="password" className="input input-bordered" required />
+                <button onClick={()=>{setShowpass( !showpass )}} className='btn btn-xs absolute right-10 bottom-40'>{
+                  showpass? <FaEyeSlash />:<IoMdEye />
+                  }</button>
               
               </div>
               <div className="form-control mt-6">

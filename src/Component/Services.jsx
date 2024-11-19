@@ -12,7 +12,7 @@ const Services = ({data}) => {
   <figure>
     <img
       src={image}
-      alt="Shoes" />
+      alt="Shoes" className="h-48 w-full" />
   </figure>
   <div className="card-body">
     <h2 className="card-title">

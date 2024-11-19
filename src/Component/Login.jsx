@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
-
+import { FaEyeSlash } from "react-icons/fa6";
+import { IoMdEye } from "react-icons/io";
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
     const navigate = useNavigate()
     const [error,setError] = useState("")
+    const [showpass,setShowpass] = useState(false)
    
     
     const handleSubmit =(e)=>
@@ -42,11 +44,16 @@ const Login = () => {
                 </label>
                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                <input type={
+                  showpass ? "text" : "password"
+                } name="password" placeholder="password" className="input input-bordered" required />
+                <button onClick={()=>{setShowpass( !showpass )}} className='btn btn-xs absolute right-2 top-12'>{
+                  showpass? <FaEyeSlash />:<IoMdEye />
+                  }</button>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
