@@ -33,7 +33,7 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
              <NavLink to="/"> <li><a>Home</a></li></NavLink>
              {
-              user ?  <NavLink to="/"> <li><a>Details</a></li></NavLink>  : <div><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              user ?  <NavLink to="/more"> <li><a>Details</a></li></NavLink>  : <div><NavLink to="/login"> <li><a>Login</a></li></NavLink>
               <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
              }
              
@@ -46,7 +46,7 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">
           <NavLink to="/"> <li><a>Home</a></li></NavLink>
           {
-              user ?  <NavLink to="/"> <li><a>Details</a></li></NavLink>  : <div className="flex"><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              user ?  <NavLink to="/more"> <li><a>Details</a></li></NavLink>  : <div className="flex"><NavLink to="/login"> <li><a>Login</a></li></NavLink>
               <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
              }
            
