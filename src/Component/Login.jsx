@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from './AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
@@ -6,13 +6,15 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { sendPasswordResetEmail } from 'firebase/auth';
+import auth from '../firebase.config';
 
 const Login = () => {
     const {handleGoogleLogin,handleLogin} = useContext(authContext);
     const navigate = useNavigate()
     const [error,setError] = useState("")
     const [showpassword,setShowpassword] = useState(false)
-   
+    const emailRef = useRef()
     
     const handleSubmit =(e)=>
     {
@@ -54,6 +56,19 @@ const Login = () => {
       }
      
     }
+    const handleForgetPass=()=>{
+      
+     const email = emailRef.current.value
+     if(!email){
+      toast("Please provide a valid email")
+     }
+     else{
+      sendPasswordResetEmail(auth,email)
+      .then(()=>{
+        toast("Password reset link sent to your email")
+      })
+     }
+    }
     
    
     useEffect(()=>{
@@ -77,7 +92,7 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                <input type="email" name="email" placeholder="email" ref={emailRef} className="input input-bordered" required />
               </div>
               <div className="form-control relative">
                 <label className="label">
@@ -89,7 +104,7 @@ const Login = () => {
                 <button onClick={()=>{setShowpassword( !showpassword )}} className='btn btn-xs absolute right-2 top-12'>{
                   showpassword? <FaEyeSlash />:<IoMdEye />
                   }</button>
-                <label className="label">
+                <label onClick={handleForgetPass} className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
               </div>
