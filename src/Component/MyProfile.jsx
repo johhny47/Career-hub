@@ -13,7 +13,9 @@ const MyProfile = () => {
         console.log(name,photoURL)
         mannageProfile(name,photoURL)
         
-       
+        useEffect(()=>{
+          document.title = "CareerHub | Profile"
+         },[])
           
       
     }

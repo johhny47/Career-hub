@@ -7,7 +7,8 @@ import Register from "../Component/Register";
 import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 import ErrorPage from "../Component/ErrorPage";
 import MyProfile from "../Component/MyProfile";
-import Forgetpass from "../Component/Forgetpass";
+import Blog from "../Component/Blog";
+
 
 const router = createBrowserRouter([
     {
@@ -52,8 +53,9 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             },
             {
-                path:"forgetpassword",
-                element:<Forgetpass></Forgetpass>
+                path:"/blog",
+                element:<PrivateRoute><Blog></Blog></PrivateRoute>,
+                loader:()=>fetch("blog.json")
             }
         ]
     }

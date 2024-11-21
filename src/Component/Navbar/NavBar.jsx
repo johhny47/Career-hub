@@ -33,20 +33,22 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[999] mt-3 w-52 p-2 shadow">
              <NavLink to="/"> <li><a>Home</a></li></NavLink>
              {
-              user ?  <NavLink to="/profile"> <li><a>My Profile</a></li></NavLink>  : <div><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              user ? <div><NavLink to="/profile"> <li><a>My Profile</a></li></NavLink> 
+              <NavLink to="/blog"> <li><a>Blog</a></li></NavLink> </div>  : <div><NavLink to="/login"> <li><a>Login</a></li></NavLink>
               <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
              }
              
             
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">CareerHub</a>
+          <a className="btn btn-ghost font-bold text-green-500 text-xl md:text-2xl lg:text-3xl">CareerHub</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
           <NavLink to="/"> <li><a>Home</a></li></NavLink>
           {
-              user ?  <NavLink to="/profile"> <li><a>My Profile</a></li></NavLink>  : <div className="flex"><NavLink to="/login"> <li><a>Login</a></li></NavLink>
+              user ?   <div className="flex"><NavLink to="/profile"> <li><a>My Profile</a></li></NavLink> 
+              <NavLink to="/blog"> <li><a>Blog</a></li></NavLink> </div> : <div className="flex"><NavLink to="/login"> <li><a>Login</a></li></NavLink>
               <NavLink to="/register"> <li><a>Register</a></li></NavLink></div>
              }
            
